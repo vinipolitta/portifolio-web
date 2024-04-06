@@ -3,11 +3,51 @@ section {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
+    margin-top: 60px;
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+
+        span {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 16px;
+            color: #151717;
+        }
+
+        h1 {
+            background: rgb(82, 34, 208);
+            background: linear-gradient(85deg, rgba(82, 34, 208, 1) 41%, rgba(255, 97, 150, 1) 96%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            width: 200px;
+            font-size: 40px;
+            margin: 0;
+        }
+    }
+
 }
 
 @media (min-width: 1080px) {
     section {
         flex-direction: row;
         justify-content: space-between;
+
+        .main-content {
+            align-items: flex-start;
+            max-width: 50%;
+
+            h1 {
+                font-size: 56px;
+            }
+        }
     }
+
+
+
 }

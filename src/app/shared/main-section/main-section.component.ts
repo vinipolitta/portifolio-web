@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./main-section.component.scss']
 })
 export class MainSectionComponent {
-
+  public textBtn = "Dowload  CV"
 }
