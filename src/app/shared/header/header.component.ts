@@ -13,12 +13,11 @@ export class HeaderComponent {
 
   setActive(item: string) {
     this.activeItem = item;
+    this.isMenuOpen = false;
   }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
-    console.log("aqui", this.isMenuOpen);
-
   }
 
 }

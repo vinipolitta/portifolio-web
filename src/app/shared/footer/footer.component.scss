@@ -31,13 +31,12 @@
 
 @media (max-width: 410px) {
     .footer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column-reverse;
+
+        p {
+            text-align: center;
+            margin-top: 2rem;
+        }
     }
 
-    .footer-text p {
-        text-align: center;
-        margin-bottom: 1rem;
-    }
 }

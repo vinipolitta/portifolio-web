@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import ScrollReveal from 'scrollreveal';
 
 @Component({
   selector: 'app-about',
