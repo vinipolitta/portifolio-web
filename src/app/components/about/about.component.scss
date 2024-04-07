@@ -46,3 +46,24 @@
 span {
     color: var(--main-color);
 }
+
+
+
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .about img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .about-img img {
+        width: 90vw;
+    }
+}
