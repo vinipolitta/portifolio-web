@@ -4,11 +4,8 @@
     <i class='bx bx-menu' id="menu-icon"></i>
 
     <nav class="navbar">
-        <a href="#home" (click)="setActive('home')" [class.active]="activeItem === 'home'">Home</a>
-        <a href="#about" (click)="setActive('about')" [class.active]="activeItem === 'about'">About</a>
-        <a href="#services">Services</a>
-        <a href="#portifolio">Portifolio</a>
-        <a href="#contact">Contact</a>
+        <a *ngFor="let item of menuItems" href="#{{ item }}" (click)="setActive(item)"
+            [class.active]="activeItem === item">{{ item.charAt(0).toUpperCase() + item.slice(1) }}</a>
     </nav>
 
 </header>

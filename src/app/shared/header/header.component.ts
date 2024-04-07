@@ -10,6 +10,8 @@ export class HeaderComponent {
 
   activeItem: string = 'home'; // Inicialmente, definimos "Home" como ativo
 
+  menuItems: string[] = ['home', 'about', 'services', 'portifolio', 'contact'];
+
   setActive(item: string) {
     this.activeItem = item;
   }
