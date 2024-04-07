@@ -1,8 +1,11 @@
-<header>
-    <a href="">Home</a>
+<header class="header">
+    <a href="" class="logo">Portifolio</a>
 
-    <div class="menu">
-        <a href="">Projects</a>
-        <button-primary [text]="btn"></button-primary>
-    </div>
+    <i class='bx' [class.bx-menu]="!isMenuOpen" [class.bx-x]="isMenuOpen" id="menu-icon" (click)="toggleMenu()"></i>
+
+    <nav class="navbar" [class.show]="isMenuOpen">
+        <a *ngFor="let item of menuItems" href="#{{ item }}" (click)="setActive(item)"
+            [class.active]="activeItem === item">{{ item.charAt(0).toUpperCase() + item.slice(1) }}</a>
+    </nav>
+
 </header>
