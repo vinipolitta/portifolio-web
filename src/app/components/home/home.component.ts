@@ -13,14 +13,14 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.github.getRepos().subscribe({
-      next: (res) => {
-        this.repository = res
-        console.log('@@', this.repository);
-        this.repository.forEach(res => console.log("$$$", res.languages_url))
+    // this.github.getRepos().subscribe({
+    //   next: (res) => {
+    //     this.repository = res
+    //     console.log('@@', this.repository);
+    //     this.repository.forEach(res => console.log("$$$", res.languages_url))
 
-      }
-    })
+    //   }
+    // })
   }
 
 
