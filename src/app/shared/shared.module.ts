@@ -4,12 +4,14 @@ import { HeaderComponent } from './header/header.component';
 import { ButtonPrimaryComponent } from './button-primary/button-primary.component';
 import { MainSectionComponent } from './main-section/main-section.component';
 import { MainAnimationComponent } from './main-animation/main-animation.component';
+import { FooterComponent } from './footer/footer.component';
 
 const components = [
   HeaderComponent,
   ButtonPrimaryComponent,
   MainSectionComponent,
-  MainAnimationComponent
+  MainAnimationComponent,
+  FooterComponent
 ]
 
 @NgModule({

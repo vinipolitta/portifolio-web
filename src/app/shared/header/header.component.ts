@@ -7,4 +7,10 @@ import { Component, Output } from '@angular/core';
 })
 export class HeaderComponent {
   @Output() btn: string = 'Contact  Me'
+
+  activeItem: string = 'home'; // Inicialmente, definimos "Home" como ativo
+
+  setActive(item: string) {
+    this.activeItem = item;
+  }
 }
