@@ -6,13 +6,19 @@ import { Component, Output } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  @Output() btn: string = 'Contact  Me'
-
   activeItem: string = 'home'; // Inicialmente, definimos "Home" como ativo
+  isMenuOpen: boolean = false;
 
   menuItems: string[] = ['home', 'about', 'services', 'portifolio', 'contact'];
 
   setActive(item: string) {
     this.activeItem = item;
   }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+    console.log("aqui", this.isMenuOpen);
+
+  }
+
 }
