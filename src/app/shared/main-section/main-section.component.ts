@@ -10,7 +10,15 @@ import Typed from 'typed.js';
   styleUrls: ['./main-section.component.scss']
 })
 export class MainSectionComponent implements OnInit {
+
   public textBtn = "Dowload  CV"
+
+  public me = {
+    name: "Vinicius Politta",
+    me: 'Olá! Me chamo Vinicius, um desenvolvedor de software experiente com 7 anos de experiência na área.\
+    Minha jornada teve início com curiosidade e amor pela tecnologia, evoluindo para uma paixão \
+    profunda pelo desenvolvimento de software.'
+  }
 
   private scrollReveal: any;
   ngOnInit(): void {
