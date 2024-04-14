@@ -6,6 +6,9 @@ import { AboutComponent } from '../about/about.component';
 import { ServicesComponent } from '../services/services.component';
 import { PortifolioComponent } from '../portifolio/portifolio.component';
 import { ContactComponent } from '../contact/contact.component';
+import { RouterModule } from '@angular/router';
+import { ReadMoreComponent } from './read-more/read-more.component';
+import { HomeRoutingModule } from './home-routing.module';
 
 const components = [
   HomeComponent,
@@ -13,7 +16,7 @@ const components = [
   ServicesComponent,
   PortifolioComponent,
   ContactComponent,
-
+  ReadMoreComponent
 
 ]
 
@@ -22,7 +25,9 @@ const components = [
   declarations: [...components],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    RouterModule,
+    HomeRoutingModule
   ]
 })
 export class HomeModule { }

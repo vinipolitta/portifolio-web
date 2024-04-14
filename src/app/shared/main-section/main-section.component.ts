@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 import ScrollReveal from 'scrollreveal';
+import { AboutMeService } from 'src/app/services/aboutMeService/about-me.service';
 
 import Typed from 'typed.js';
+import { Perfil } from '../types/perfil';
 
 @Component({
   selector: 'app-main-section',
@@ -10,13 +12,33 @@ import Typed from 'typed.js';
   styleUrls: ['./main-section.component.scss']
 })
 export class MainSectionComponent implements OnInit {
+
   public textBtn = "Dowload  CV"
 
+  public profile!: Perfil;
+
+  // public me = {
+  //   name: "Vinicius Politta",
+  //   me: 'Olá! Me chamo Vinicius, um desenvolvedor de software experiente com 7 anos de experiência na área.\
+  //   Minha jornada teve início com curiosidade e amor pela tecnologia, evoluindo para uma paixão \
+  //   profunda pelo desenvolvimento de software.'
+  // }
+
   private scrollReveal: any;
+  resume!: string;
+
+  constructor(private aboutMeService: AboutMeService) { }
+
   ngOnInit(): void {
     this.animationScroll();
     this.animationTyped();
+    this.getInfoService();
 
+  }
+
+  getInfoService() {
+    this.profile = this.aboutMeService.myProfile
+    this.resume = this.aboutMeService.resume
   }
 
   animationScroll() {
