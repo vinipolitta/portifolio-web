@@ -5,17 +5,19 @@ import { ButtonPrimaryComponent } from './button-primary/button-primary.componen
 import { MainSectionComponent } from './main-section/main-section.component';
 import { MainAnimationComponent } from './main-animation/main-animation.component';
 import { FooterComponent } from './footer/footer.component';
+import { SectionComponent } from './section/section.component';
 
 const components = [
   HeaderComponent,
   ButtonPrimaryComponent,
   MainSectionComponent,
   MainAnimationComponent,
-  FooterComponent
+  FooterComponent,
+  SectionComponent
 ]
 
 @NgModule({
-  declarations: [...components],
+  declarations: [...components,],
   imports: [
     CommonModule
   ],
