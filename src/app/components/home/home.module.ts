@@ -5,10 +5,11 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AboutComponent } from '../about/about.component';
 import { ServicesComponent } from '../services/services.component';
 import { PortifolioComponent } from '../portifolio/portifolio.component';
-import { ContactComponent } from '../contact/contact.component';
 import { RouterModule } from '@angular/router';
 import { ReadMoreComponent } from './read-more/read-more.component';
 import { HomeRoutingModule } from './home-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ContactComponent } from '../contact/contact.component';
 
 const components = [
   HomeComponent,
@@ -27,7 +28,9 @@ const components = [
     CommonModule,
     SharedModule,
     RouterModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class HomeModule { }
