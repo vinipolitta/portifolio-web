@@ -50,4 +50,4 @@ jobs:
 
       - name: Deploy to S3
         run: |
-          aws s3 sync ./dist/viniciuspolitta.com.br s3://viniciuspolitta.com.br/
+          aws s3 sync ./dist/portifolio-web s3://viniciuspolitta.com.br/
