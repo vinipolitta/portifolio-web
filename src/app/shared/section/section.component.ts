@@ -13,4 +13,11 @@ export class SectionComponent {
   @Input() textH3: string = '';
   @Input() socialMidia: boolean = true;
   @Input() bgContent: string = 'read-more-primary';
+
+  downloadCv() {
+    const link = document.createElement('a');
+    link.href = '../../../assets/pdf/Vinicius Politta Curriculo.pdf';
+    link.download = 'Vinicius Politta Curriculo.pdf';
+    link.click();
+  }
 }
