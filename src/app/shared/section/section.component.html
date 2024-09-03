@@ -1,23 +1,22 @@
 <section class="home" [class]="bgContent" id="home">
-    <div class="home-content">
-        <h1>{{ title }}</h1>
-        <h3>{{ textH3 }}</h3>
-        <p>{{ titleDescription }}</p>
+  <div class="home-content">
+    <h1>{{ title }}</h1>
+    <h3>{{ textH3 }}</h3>
+    <p>{{ titleDescription }}</p>
 
-        <h3>{{ subTitle }}</h3>
-        <p>{{ subTitleDescripton }}</p>
+    <h3>{{ subTitle }}</h3>
+    <p>{{ subTitleDescripton }}</p>
 
-        <div *ngIf="socialMidia">
-            <div class="social-media">
-                <a href=""><i class='bx bxl-facebook-circle'></i></a>
-                <a href=""><i class='bx bxl-instagram-alt'></i></a>
-                <a href=""><i class='bx bxl-github'></i></a>
-                <a href=""><i class='bx bxl-linkedin-square'></i></a>
-            </div>
-            <a href="#" class="btn">Download CV</a>
-        </div>
+    <div *ngIf="socialMidia">
+      <div class="social-media">
+        <a href="https://github.com/vinipolitta" target="_blank"><i class='bx bxl-github'></i></a>
+        <a href="https://www.linkedin.com/in/vinicius-politta/" target="_blank"><i
+            class='bx bxl-linkedin-square'></i></a>
+      </div>
+      <button (click)="downloadCv()" class="btn">Download CV</button>
     </div>
-    <div class="home-img">
-        <img src="../../../assets/images/vini-removebg.png" alt="">
-    </div>
+  </div>
+  <div class="home-img">
+    <img src="../../../assets/images/vini-removebg.png" alt="">
+  </div>
 </section>

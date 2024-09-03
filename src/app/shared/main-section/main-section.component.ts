@@ -24,6 +24,13 @@ export class MainSectionComponent implements OnInit {
   //   profunda pelo desenvolvimento de software.'
   // }
 
+  downloadCv() {
+    const link = document.createElement('a');
+    link.href = '../../../assets/pdf/Vinicius Politta Curriculo.pdf';
+    link.download = 'Vinicius Politta Curriculo.pdf';
+    link.click();
+  }
+
   private scrollReveal: any;
   resume!: string;
 
