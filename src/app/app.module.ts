@@ -7,6 +7,9 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './components/home/home.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 @NgModule({
@@ -15,10 +18,12 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HomeModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
