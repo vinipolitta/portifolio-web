@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { ResponseEmail } from '../components/contact/contact.component';
+import { Observable } from 'rxjs';
 
 interface SendEmail {
   to: string;
@@ -17,7 +19,7 @@ export const API_URL = environment.apiEmail;
 export class EmailService {
   constructor(private http: HttpClient) {}
 
-  sendEmail(sendEmail: SendEmail) {
-    return this.http.post(API_URL, sendEmail);
+  sendEmail(sendEmail: SendEmail): Observable<ResponseEmail> {
+    return this.http.post<ResponseEmail>(API_URL, sendEmail);
   }
 }

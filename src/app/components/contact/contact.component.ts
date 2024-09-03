@@ -1,8 +1,13 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 import { ContactService } from 'src/app/services/contact.service';
 import { EmailService } from 'src/app/services/email.service';
+
+export interface ResponseEmail {
+  message: string;
+}
 
 @Component({
   selector: 'app-contact',
@@ -12,7 +17,11 @@ import { EmailService } from 'src/app/services/email.service';
 export class ContactComponent implements OnInit {
   form!: FormGroup;
 
-  constructor(private fb: FormBuilder, private emailService: EmailService) {}
+  constructor(
+    private fb: FormBuilder,
+    private emailService: EmailService,
+    private toastr: ToastrService
+  ) {}
 
   ngOnInit(): void {
     this.formulario();
@@ -29,17 +38,18 @@ export class ContactComponent implements OnInit {
   }
 
   submit() {
-
-
-
-    this.emailService.sendEmail(this.form.value).subscribe(
-      (response: any) => {
-        console.log('Response:', response);
-        // Process the response as a JSON object
-      },
-      (error: HttpErrorResponse) => {
-        console.error('Error:', error);
-      }
-    );
+    if (this.form.valid) {
+      this.emailService.sendEmail(this.form.value).subscribe(
+        (response: ResponseEmail) => {
+          if (response) {
+            this.toastr.success(response.message);
+            this.form.reset();
+          }
+        },
+        (error: HttpErrorResponse) => {
+          this.toastr.error(error.message);
+        }
+      );
+    }
   }
 }
